@@ -6,7 +6,7 @@
 /*   By: esobrinh <esobrinh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 10:47:42 by esobrinh          #+#    #+#             */
-/*   Updated: 2023/04/14 18:31:37 by esobrinh         ###   ########.fr       */
+/*   Updated: 2023/04/17 15:32:20 by esobrinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,7 @@ static int set_mandelbrot(double cx, double cy, t_data *data)
 	if (data->iteration == MAX_ITER)
 		return (0x00000000);
 	else
-		return (get_color(data->iteration, MAX_ITER, 0x00330000, 0x00FF99FF));
-		//return (get_color(data->iteration, MAX_ITER, 0x0f0f0f, 0x00FF99FF/*0Xffffff*/));
-		//return (get_color(&data));
+		return (get_color(data->iteration, MAX_ITER, 0x000009,data->color_set));
 }
 
 void	mandelbrot(t_data *data)

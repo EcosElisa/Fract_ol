@@ -6,7 +6,7 @@
 /*   By: esobrinh <esobrinh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 13:24:35 by esobrinh          #+#    #+#             */
-/*   Updated: 2023/04/14 18:16:13 by esobrinh         ###   ########.fr       */
+/*   Updated: 2023/04/17 14:01:33 by esobrinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,26 +45,6 @@
 //     return (r << 16) | (g << 8) | b;
 // }
 
-// static int get_color(int iteration)
-// {
-//     if (iteration == MAX_ITER)
-//         return 0x00000000;
-    
-//     int r = 0, g = 0, b = 0;
-    
-//     if (iteration < MAX_ITER / 2) {
-//         r = (int)(255.0 * iteration / (MAX_ITER / 2));
-//         g = 0;
-//         b = (int)(255.0 * iteration / (MAX_ITER / 2));
-//     } else {
-//         r = 255;
-//         g = (int)(255.0 * (iteration - MAX_ITER / 2) / (MAX_ITER / 2));
-//         b = 255;
-//     }
-    
-//     return (r << 16) | (g << 8) | b;
-// }
-
 // int	get_color(t_data *data)
 // {
 // 	int	r;
@@ -91,29 +71,6 @@
 // 	return (r << 16) | (g << 8) | b;
 // }
 
-// int get_color(t_data **data)
-// {
-// 	double	t;
-// 	int	start_color
-
-// 	(*data)->color.r = 90;
-// 	(*data)->color.g = 255;
-// 	(*data)->color.b = 0;
-	
-// 	t = (double)(*data)->iteration / MAX_ITER;
-// 	(*data)->color.start_color = ((*data)->color.start_color >> 16) & 0xFF;
-// 	(*data)->color.start_g = ((*data)->color.start_color >> 8) & 0xFF;
-// 	(*data)->color.start_b = (*data)->color.start_color & 0xFF;
-// 	(*data)->color.end_r = ((*data)->color.end_color >> 16) & 0xFF;
-// 	(*data)->color.end_g = ((*data)->color.end_color >> 8) & 0xFF;
-// 	(*data)->color.end_b = (*data)->color.end_color & 0xFF;
-
-// 	(*data)->color.r = (int)((*data)->color.start_r + ((*data)->color.end_r - (*data)->color.start_r) * t);
-// 	(*data)->color.g = (int)((*data)->color.start_g + ((*data)->color.end_g - (*data)->color.start_g) * t);
-// 	(*data)->color.b = (int)((*data)->color.start_b + ((*data)->color.end_b - (*data)->color.start_b) * t);
-
-// 	return ((*data)->color.r << 16) | ((*data)->color.g << 8) | (*data)->color.b;
-// }
 
 // int get_color(int iteration, int max_iteration, int start_color, int end_color)
 // {
