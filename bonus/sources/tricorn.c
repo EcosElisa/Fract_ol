@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mandelbrot.c                                       :+:      :+:    :+:   */
+/*   tricorn.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esobrinh <esobrinh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/04 10:47:42 by esobrinh          #+#    #+#             */
-/*   Updated: 2023/04/24 18:20:11 by esobrinh         ###   ########.fr       */
+/*   Created: 2023/04/25 18:17:32 by esobrinh          #+#    #+#             */
+/*   Updated: 2023/04/25 18:27:00 by esobrinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "fractol_bonus.h"
 
-static int	set_mandelbrot(double cx, double cy, t_data *data)
+static int	set_tricorn(double cx, double cy, t_data *data)
 {
 	double	xz;
 	double	yz;
@@ -24,7 +24,7 @@ static int	set_mandelbrot(double cx, double cy, t_data *data)
 	while (xz * xz + yz * yz < 4 && data->iteration < data->max_iter)
 	{
 		z = xz * xz - yz * yz + cx;
-		yz = 2 * xz * yz + cy;
+		yz = -2 * xz * yz + cy;
 		xz = z;
 		data->iteration++;
 	}
@@ -35,7 +35,7 @@ static int	set_mandelbrot(double cx, double cy, t_data *data)
 				0x080808, data->color_set));
 }
 
-void	mandelbrot(t_data *data)
+void	tricorn(t_data *data)
 {
 	int		x;
 	int		y;
@@ -52,7 +52,7 @@ void	mandelbrot(t_data *data)
 		{
 			cx = data->image.x_min + x * (data->image.x_max \
 					- data->image.x_min) / WIDTH;
-			image_pixel_put(&data->image, x, y, set_mandelbrot(cx, cy, data));
+			image_pixel_put(&data->image, x, y, set_tricorn(cx, cy, data));
 			x++;
 		}
 		y++;

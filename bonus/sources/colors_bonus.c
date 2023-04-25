@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   colors.c                                           :+:      :+:    :+:   */
+/*   colors_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esobrinh <esobrinh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/12 13:24:35 by esobrinh          #+#    #+#             */
-/*   Updated: 2023/04/20 18:25:00 by esobrinh         ###   ########.fr       */
+/*   Created: 2023/04/25 15:03:22 by esobrinh          #+#    #+#             */
+/*   Updated: 2023/04/25 15:04:32 by esobrinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "fractol_bonus.h"
 
 int	get_color(int iteration, int max_iteration, int start_color, int end_color)
 {

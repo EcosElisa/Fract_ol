@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fractol_utils.c                                    :+:      :+:    :+:   */
+/*   fractol_utils_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esobrinh <esobrinh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/06 16:32:33 by esobrinh          #+#    #+#             */
-/*   Updated: 2023/04/24 17:11:58 by esobrinh         ###   ########.fr       */
+/*   Created: 2023/04/25 14:20:34 by esobrinh          #+#    #+#             */
+/*   Updated: 2023/04/25 14:21:51 by esobrinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "fractol_bonus.h"
 
 void	image_pixel_put(t_image *image, int x, int y, int color)
 {

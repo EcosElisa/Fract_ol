@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mandelbrot.c                                       :+:      :+:    :+:   */
+/*   mandelbrot_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esobrinh <esobrinh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/04 10:47:42 by esobrinh          #+#    #+#             */
-/*   Updated: 2023/04/24 18:20:11 by esobrinh         ###   ########.fr       */
+/*   Created: 2023/04/25 14:16:03 by esobrinh          #+#    #+#             */
+/*   Updated: 2023/04/25 14:18:19 by esobrinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "fractol_bonus.h"
 
 static int	set_mandelbrot(double cx, double cy, t_data *data)
 {

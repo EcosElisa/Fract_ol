@@ -6,7 +6,7 @@
 /*   By: esobrinh <esobrinh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 16:32:33 by esobrinh          #+#    #+#             */
-/*   Updated: 2023/04/24 17:11:58 by esobrinh         ###   ########.fr       */
+/*   Updated: 2023/04/20 16:53:09 by esobrinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,35 +28,4 @@ int	close_program(t_data *data)
 	free(data);
 	exit(0);
 	return (0);
-}
-
-int	skip_space_sign_0x(char *hex_string)
-{
-	int	i;
-
-	i = 0;
-	while (ft_isspace(hex_string[i]))
-		i++;
-	if (hex_string[i] == '+')
-		i++;
-	if (hex_string[i] == '0' && (hex_string[i + 1] \
-		&& (hex_string[i + 1] == 'x' || hex_string[i] == 'X')))
-			i = i + 2;
-	return (i);
-}
-
-int	skip_space_sign(char *str, int *is_neg)
-{
-	int	i;
-
-	i = 0;
-	while (ft_isspace(str[i]))
-		i++;
-	if (str[i] == '+' || str[i] == '-')
-	{
-		if (str[i] == '-')
-			*is_neg *= -1;
-		i++;
-	}
-	return (i);
 }

@@ -6,7 +6,7 @@
 /*   By: esobrinh <esobrinh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 16:19:33 by esobrinh          #+#    #+#             */
-/*   Updated: 2023/04/24 17:13:14 by esobrinh         ###   ########.fr       */
+/*   Updated: 2023/04/20 17:29:17 by esobrinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int	start_image(t_data *data)
 	return (0);
 }
 
+//Serve para setar a imagem nos parametros iniciais depois q da zoom
 void	first_image(t_data *data)
 {
 	data->image.x_max = CX_MAX;
@@ -53,10 +54,10 @@ static int	start_window(t_data *data)
 		return (1);
 	}
 	first_image(data);
-	mlx_hook(data->win_ptr, 2, 1L << 0, handle_input, data);
-	mlx_hook(data->win_ptr, 17, 1L << 0, close_program, data);
-	mlx_hook(data->win_ptr, 4, 1L << 2, mouse_events, data);
-	mlx_hook(data->win_ptr, 6, 1l << 6, mouse_julia, data);
+	mlx_hook(data->win_ptr, 2, 1L<<0, handle_input, data);
+	mlx_hook(data->win_ptr, 17, 1L<<0, close_program, data);//Fecha a janela com o X
+	mlx_hook(data->win_ptr, 4, 1L<<2, mouse_events, data);
+	mlx_hook(data->win_ptr, 6, 1l<<6, mouse_julia, data);
 	mlx_loop_hook(data->mlx_ptr, start_image, data);
 	mlx_loop(data->mlx_ptr);
 	return (0);

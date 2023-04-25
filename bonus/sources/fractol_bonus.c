@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fractol.c                                          :+:      :+:    :+:   */
+/*   fractol_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esobrinh <esobrinh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/05 16:19:33 by esobrinh          #+#    #+#             */
-/*   Updated: 2023/04/24 17:13:14 by esobrinh         ###   ########.fr       */
+/*   Created: 2023/04/25 15:11:04 by esobrinh          #+#    #+#             */
+/*   Updated: 2023/04/25 19:03:30 by esobrinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "fractol_bonus.h"
 
 int	start_image(t_data *data)
 {
@@ -19,6 +19,8 @@ int	start_image(t_data *data)
 			&data->image.bpp, &data->image.size_line, &data->image.endian);
 	if (data->fractal_set == 'm')
 		mandelbrot(data);
+	else if (data->fractal_set == 't')
+		tricorn(data);
 	else if (data->fractal_set == 'j')
 		julia(data);
 	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr, \
