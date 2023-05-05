@@ -6,7 +6,7 @@
 /*   By: esobrinh <esobrinh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 16:31:03 by esobrinh          #+#    #+#             */
-/*   Updated: 2023/04/24 19:38:12 by esobrinh         ###   ########.fr       */
+/*   Updated: 2023/05/04 16:32:42 by esobrinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,19 +70,19 @@ double	ft_atof(char *str)
 
 int	check_arg(int argc, char *argv[], t_data *data)
 {
-	if (argc == 2 && ft_strncmp("Mandelbrot", argv[1], 10) == 0)
+	if (argc == 2 && ft_strcmp("Mandelbrot", argv[1]) == 0)
 	{
 		data->fractal_set = 'm';
 		data->color_set = 0x0ff0fc;
 		return (1);
 	}
-	if (argc == 3 && ft_strncmp("Mandelbrot", argv[1], 10) == 0)
+	if (argc == 3 && ft_strcmp("Mandelbrot", argv[1]) == 0)
 	{
 		data->fractal_set = 'm';
 		data->color_set = hex_to_dec(argv[2], data);
 		return (1);
 	}
-	if (argc == 4 && ft_strncmp("Julia", argv[1], 5) == 0 \
+	if (argc == 4 && ft_strcmp("Julia", argv[1]) == 0 \
 			&& ft_atof(argv[2]) >= -2.0 && ft_atof(argv[2]) <= 2.0 \
 			&& ft_atof(argv[3]) >= -2.0 && ft_atof(argv[3]) <= 2.0)
 	{

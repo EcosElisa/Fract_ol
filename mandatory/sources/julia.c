@@ -6,7 +6,7 @@
 /*   By: esobrinh <esobrinh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 15:21:11 by esobrinh          #+#    #+#             */
-/*   Updated: 2023/04/24 18:31:25 by esobrinh         ###   ########.fr       */
+/*   Updated: 2023/05/04 16:04:30 by esobrinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int	set_julia(double cx, double cy, t_data *data)
 	while (xz * xz + yz * yz < 4 && data->iteration < data->max_iter)
 	{
 		z = xz * xz - yz * yz + data->x_julia;
-		yz = 2 * xz * yz + data->y_julia;
+		yz = 2 * xz * yz - data->y_julia;
 		xz = z;
 		data->iteration++;
 	}

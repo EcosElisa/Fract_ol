@@ -6,7 +6,7 @@
 /*   By: esobrinh <esobrinh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 18:39:44 by esobrinh          #+#    #+#             */
-/*   Updated: 2023/04/24 17:14:27 by esobrinh         ###   ########.fr       */
+/*   Updated: 2023/04/26 13:59:25 by esobrinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ static void	print_fractal_options(void)
 	ft_putendl_fd("Which fractal would you like to view?", 1);
 	ft_putendl_fd("\tMandelbrot", 1);
 	ft_putendl_fd("\tJulia", 1);
-	ft_putendl_fd("\e[36mUsage example:\t./fractol <type>\n\t\t. \
-			/fractol Mandelbrot\e[0m", 1);
+	ft_putendl_fd("\e[36mUsage example:\t./fractol <type>\e[0m", 1);
+	ft_putendl_fd("\e[36m\t\t./fractol Mandelbrot\e[0m", 1);
 	ft_putstr_fd("\nFor Julia, you may specify starting values for the\n", 1);
 	ft_putstr_fd("initial fractal shape. Values must be between\n", 1);
 	ft_putendl_fd("-2.0 and 2.0 and must contain a decimal point.", 1);
-	ft_putendl_fd("\e[36mUsage example:\t", 1);
-	ft_putendl_fd("./fractol Julia\n\t\t./fractol Julia 0.285 0.01\e[0m", 1);
+	ft_putendl_fd("\e[36mUsage example:", 1);
+	ft_putendl_fd("\t\t./fractol Julia\n\t\t./fractol Julia 0.285 0.01\e[0m", 1);
 }
 
 static void	print_color_options(void)
@@ -47,11 +47,11 @@ static void	print_color_options(void)
 static void	print_controls(void)
 {
 	ft_putendl_fd("\n+===============  Controls  =========================+", 1);
-	ft_putendl_fd("R:\tReset the image.", 1);
-	ft_putendl_fd("A/D:\tDefine the number of iteration(a: increases", 1);
-	ft_putendl_fd("\t\td: decreases).", 1);
-	ft_putendl_fd("Scroll wheel or I/O:\tZoom in and out.", 1);
-	ft_putendl_fd("ESC, Q or close window:\tQuit fract'ol.", 1);
+	ft_putendl_fd("Key_R:\t\tReset the image.", 1);
+	ft_putendl_fd("Keys A/D:\tDefine the number of iteration(a: increases", 1);
+	ft_putendl_fd("\t\t\td: decreases).", 1);
+	ft_putendl_fd("Scroll wheel or Keys I/O:\tZoom in and out.", 1);
+	ft_putendl_fd("ESC, Key_Q or close window:\tQuit fract'ol.", 1);
 	ft_putendl_fd("JULIA - Mouse moves:\tChanges the values of the ", 1);
 	ft_putendl_fd("\t\t\tcomplex numbers.", 1);
 	ft_putendl_fd("JULIA - Space:\tTo freeze the image.", 1);

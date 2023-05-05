@@ -6,7 +6,7 @@
 /*   By: esobrinh <esobrinh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 15:08:05 by esobrinh          #+#    #+#             */
-/*   Updated: 2023/04/25 20:05:05 by esobrinh         ###   ########.fr       */
+/*   Updated: 2023/05/04 16:34:59 by esobrinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,19 +70,19 @@ double	ft_atof(char *str)
 
 int	check_arg(int argc, char *argv[], t_data *data)
 {
-	if (argc == 2 && ft_strncmp("Mandelbrot", argv[1], 10) == 0)
+	if (argc == 2 && ft_strcmp("Mandelbrot", argv[1]) == 0)
 	{
 		data->fractal_set = 'm';
 		data->color_set = 0x0ff0fc;
 		return (1);
 	}
-	if (argc == 3 && ft_strncmp("Mandelbrot", argv[1], 10) == 0)
+	if (argc == 3 && ft_strcmp("Mandelbrot", argv[1]) == 0)
 	{
 		data->fractal_set = 'm';
 		data->color_set = hex_to_dec(argv[2], data);
 		return (1);
 	}
-	if (argc == 4 && ft_strncmp("Julia", argv[1], 5) == 0 \
+	if (argc == 4 && ft_strcmp("Julia", argv[1]) == 0 \
 			&& ft_atof(argv[2]) >= -2.0 && ft_atof(argv[2]) <= 2.0 \
 			&& ft_atof(argv[3]) >= -2.0 && ft_atof(argv[3]) <= 2.0)
 	{
@@ -97,13 +97,13 @@ int	check_arg(int argc, char *argv[], t_data *data)
 
 int	check_tricorn(int argc, char *argv[], t_data *data)
 {
-	if (argc == 2 && ft_strncmp("Tricorn", argv[1], 8) == 0)
+	if (argc == 2 && ft_strcmp("Tricorn", argv[1]) == 0)
 	{
 		data->fractal_set = 't';
-		data->color_set = 0x0ff0fc;
+		data->color_set = 0xff1493;
 		return (1);
 	}
-	if (argc == 3 && ft_strncmp("Tricorn", argv[1], 8) == 0)
+	if (argc == 3 && ft_strcmp("Tricorn", argv[1]) == 0)
 	{
 		data->fractal_set = 't';
 		data->color_set = hex_to_dec(argv[2], data);

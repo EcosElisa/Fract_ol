@@ -6,7 +6,7 @@
 /*   By: esobrinh <esobrinh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 14:12:37 by esobrinh          #+#    #+#             */
-/*   Updated: 2023/04/25 20:08:43 by esobrinh         ###   ########.fr       */
+/*   Updated: 2023/04/26 14:11:22 by esobrinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <mlx.h>
 # include <stdlib.h>
-# include <math.h>
 # include "../libft/libft.h"
 
 # define WIDTH 800

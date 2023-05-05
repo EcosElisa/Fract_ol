@@ -6,7 +6,7 @@
 /*   By: esobrinh <esobrinh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 01:25:45 by esobrinh          #+#    #+#             */
-/*   Updated: 2023/04/17 17:52:16 by esobrinh         ###   ########.fr       */
+/*   Updated: 2023/05/04 16:24:59 by esobrinh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ char	*ft_strdup(const char *s);
 size_t	ft_strlcat(char *dst, const char *src, size_t destsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *str);
+int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *str1, const char *str2, size_t count);
 char	*ft_strnstr(const char *s, const char *sfind, size_t slen);
 char	*ft_strrchr(const char *str, int c);
